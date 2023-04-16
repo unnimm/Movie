@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Chronometer
+            android:id= "@+id/chronometer1"
+            android:format = "예약에 걸린 시간 %s"
+            android:gravity="center"
+            android:textSize="20dp" android:layout_height="300dp" android:layout_width="300dp"/>
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:text="예약 시작" />
+    </LinearLayout>
+    <RadioGroup android:layout_height="100dp" android:layout_width="100dp">
+        <RadioButton
+            android:id="@+id/rdoTime"
+            android:text="시간 설정"
+            android:layout_height="100dp"
+            android:layout_width="100dp"/>
+    </RadioGroup>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_height="500dp"
+         android:layout_width="500dp">
+        <FrameLayout
+            android:layout_height="100dp"
+            android:layout_width="100dp">
+            <CalendarView
+                android:id="@+id/calendarView1"
+                android:showWeekNumber="false"
+                android:layout_height="500dp"
+                android:layout_width="500dp"/>
+            <TimePicker
+                android:id="@+id/timePicker1"
+                android:layout_height="300dp"
+                android:layout_width="300dp"/>
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:blackground="#CCCCCC"
+        android:layout_height="500dp"
+        android:layout_width="500dp">
+        <Button
+            android:id="@+id/btnEnd"
+            android:text="예약완료"
+            android:layout_height="100dp"
+            android:layout_width="100dp"/>
+        <TextView
+            android:id = "@+id/tvYear"
+            android:text="0000"
+            android:layout_height="100dp"
+            android:layout_width="100dp"/>
+        <TextView
+            android:text="년"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            />
+        <TextView
+            android:id = "@+id/tvMonth"
+            android:text="00"
+            android:layout_height="100dp"
+            android:layout_width="100dp"/>
+        <TextView
+            android:text="월"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            />
+        <TextView
+            android:id = "@+id/tvDate"
+            android:text="00"
+            android:layout_height="100dp"
+            android:layout_width="100dp"/>
+        <TextView
+            android:text="일"
+            android:layout_height="100dp"
+            android:layout_width="100dp"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
